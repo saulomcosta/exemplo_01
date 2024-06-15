@@ -1,6 +1,6 @@
 const exemploMock = require('../src/exemplo-mock');
 
-test('Exemplo 01 - Mock callback', async () => {
+test('Teste 01 - Mock callback', async () => {
   // preparar o cenário
   const pessoas = new Array(3);
 
@@ -44,6 +44,11 @@ test('Teste 02 - Mock Timer', (done) => {
 
   jest.advanceTimersByTime(3000);
   expect(mockCallback).toHaveBeenCalledTimes(1);
+});
+
+test('Teste 03 - Somar dois números', () => {
+  const soma = exemploMock.somar(2, 3);
+  expect(soma).toBe(5);
 });
 
 afterEach(() => {
