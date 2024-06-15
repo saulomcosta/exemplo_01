@@ -46,6 +46,11 @@ test('Teste 02 - Mock Timer', (done) => {
   expect(mockCallback).toHaveBeenCalledTimes(1);
 });
 
+test('Teste 03 - Subtrair dois numeros', () => {
+  const subtrair = exemploMock.subtrair(4, 1);
+  expect(subtrair).toBe(3);
+});
+
 afterEach(() => {
   jest.useRealTimers();
 });
